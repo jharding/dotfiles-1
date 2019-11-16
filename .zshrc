@@ -97,7 +97,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-for file in ~/.{exports,aliases,functions,extra}; do
+for file in ~/.{exports,aliases,functions,localrc}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
+
+bindkey "[D" backward-word
+bindkey "[C" forward-word
