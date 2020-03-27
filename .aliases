@@ -17,3 +17,6 @@ alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C
 alias ga='git add'
 alias gc='git commit'
 alias gb='git branch'
+# Push the current branch to the remote "origin", and set it to track
+# the upstream branch
+alias gpub='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
